@@ -1,5 +1,6 @@
 package com.challenge2.challenge2.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
@@ -36,6 +37,7 @@ public class Student extends User{
     private LocalDateTime startDate;
 
     @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @Column(name = "endDate")
     private LocalDateTime endDate;
 
     @JsonIgnore
